@@ -1,0 +1,46 @@
+{
+    "name": "snap-transition",
+    "version": "1.0.0",
+    "private": false,
+    "description": "transitions done in a snap 👌",
+    "main": "dist/snap-transition.js",
+    "module": "dist/snap-transition.module.js",
+    "umd:main": "dist/snap-transition.umd.js",
+    "source": "src/index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "microbundle build --raw --jsx React.createElement",
+        "dev": "microbundle watch --raw --format cjs",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "version": "npm run build",
+        "postversion": "git push && git push --tags"
+    },
+    "keywords": [
+        "react",
+        "preact",
+        "snap",
+        "transition"
+    ],
+    "authors": [
+        "Andre Venancio <info@andrevenancio.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andrevenancio/snap-transition.git"
+    },
+    "bugs": {
+        "url": "https://github.com/andrevenancio/snap-transition/issues"
+    },
+    "homepage": "https://github.com/andrevenancio/snap-transition#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "microbundle": "^0.11.0",
+        "braces": ">=2.3.1"
+    },
+    "peerDependencies": {
+        "react": ">=16.13.0",
+        "react-router-dom": ">=5.1.2",
+        "prop-types": ">=15.7.2",
+        "gsap": ">=3.2.6"
+    }
+}
