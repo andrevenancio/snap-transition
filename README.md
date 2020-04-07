@@ -14,27 +14,17 @@ However, if you're like me, and you want to be able to control exactly how your 
 
 You should wrap your routes in a <Transition> component. All that component needs to know is when should the page change, so you provide it with the location and how should it animate. so you provide it with an transition effect.
 
+
+## Example
+https://codesandbox.io/s/nice-tereshkova-54lck
+
 Here's an example below on how your React application can look like.
 
 ```javascript
 import React from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom';
 import { Transition, verticalSlide } from 'snap-transition';
-// the components below can be anything really. Functional, or Class components.
-import { HomePage, WorkPage } from './pages';
-
-const routes = [
-    {
-        path: '/',
-        exact: true,
-        child: <HomePage />,
-    },
-    {
-        path: '/work',
-        exact: true,
-        child: <WorkPage />,
-    },
-];
+import { routes } from './routes';
 
 const Application = ({ location }) => {
     return (
